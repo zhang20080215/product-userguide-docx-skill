@@ -2,22 +2,34 @@
 
 A Codex skill for generating or updating Chinese software product user guides in `.docx` format from live websites.
 
-## What It Supports
+## Features
 
-- PC menu-based systems
-- Mobile H5 products
-- Live login and page inspection
-- Screenshot capture for pages and popups
-- Screenshot placement under matching operation steps
-- Button-click verification for downstream pages and popups
-- Chinese terminology normalization for route-based page names
-- Refinement of existing user guides against a reference `.docx`
+- Supports PC menu-based systems
+- Supports mobile H5 products
+- Logs into live systems and inspects real UI behavior
+- Captures screenshots for pages, popups, and downstream workflow screens
+- Places screenshots under the matching operation steps
+- Verifies button-triggered pages and popups by actual clicks
+- Normalizes route-style or English page names into Chinese product terminology
+- Refines existing manuals against a reference `.docx`
 
-## Main Files
+## Repository Structure
 
-- `SKILL.md`: main skill instructions
-- `references/`: workflow, naming, screenshot, template, and review rules
-- `scripts/capture-site.js`: capture helper skeleton
+```text
+.
+├─ SKILL.md
+├─ agents/
+│  └─ openai.yaml
+├─ references/
+│  ├─ workflow.md
+│  ├─ platform-modes.md
+│  ├─ screenshot-rules.md
+│  ├─ doc-template.md
+│  ├─ page-naming.md
+│  └─ review-checklist.md
+└─ scripts/
+   └─ capture-site.js
+```
 
 ## Install
 
@@ -27,7 +39,7 @@ Copy this folder into your Codex skills directory, for example:
 ~/.codex/skills/product-userguide-docx
 ```
 
-or on this machine:
+Or on this machine:
 
 ```text
 C:\Users\zhang\.codex\skills\product-userguide-docx
@@ -38,7 +50,7 @@ C:\Users\zhang\.codex\skills\product-userguide-docx
 Ask Codex to use the skill and provide:
 
 - website URL
-- login info
+- login information
 - reference docx path, if any
 - screenshot directory
 - target docx path
@@ -55,3 +67,8 @@ Example:
 目标docx：D:\work\产品使用说明书.docx
 先输出完整计划，确认后执行。
 ```
+
+## Notes
+
+- This repository contains the reusable skill only.
+- Do not commit real customer documents, screenshots, credentials, or temporary debugging files.

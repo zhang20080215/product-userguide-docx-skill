@@ -1,0 +1,7 @@
+interface:
+  display_name: "Product User Guide DOCX"
+  short_description: "Generate or refine Chinese product manuals from live websites"
+  default_prompt: "Use $product-userguide-docx to generate or refine a Chinese product user guide in docx format from a live website, with screenshots placed under the matching operation steps."
+
+policy:
+  allow_implicit_invocation: true
