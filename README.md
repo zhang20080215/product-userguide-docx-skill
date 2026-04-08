@@ -38,8 +38,10 @@ A Codex skill for generating or updating Chinese software product user guides in
 │  ├─ doc-template.md
 │  ├─ page-naming.md
 │  └─ review-checklist.md
-└─ scripts/
-   └─ capture-site.js
+├─ scripts/
+│  └─ capture-site.js
+└─ docs/
+   └─ release-notes-v0.1.0.md
 ```
 
 ## Install | 安装方式
@@ -115,6 +117,11 @@ Example:
 - 按参考文档统一说明书风格
 - 核查是否覆盖每一个重要按钮点击后的结果页
 - 生成带有移动端尺寸截图的 H5 说明书
+
+## Release | 版本发布
+
+- Current version: `v0.1.0`
+- Release notes: [docs/release-notes-v0.1.0.md](docs/release-notes-v0.1.0.md)
 
 ## Notes | 注意事项
 
